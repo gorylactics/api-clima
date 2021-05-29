@@ -7,7 +7,7 @@ $(document).ready(function(){
         let unidad = 'metric';
         const url = `http://api.openweathermap.org/data/2.5/weather?q=${consulta}&appid=${llave}&lang=${idioma}&units=${unidad}`;
         $.get(url , function(recopilacion){
-            $('#resultado').html('');
+            $('#resultado').empty();
             let ciudad = recopilacion.name;
             let temperatura = recopilacion.main.temp;
             const latitud = recopilacion.coord.lat;
